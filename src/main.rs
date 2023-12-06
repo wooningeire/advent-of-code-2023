@@ -7,6 +7,7 @@ mod d02;
 mod d03;
 mod d04;
 mod d05;
+mod d06;
 
 trait Solver<T> {
     fn run_01() -> T;
@@ -38,6 +39,7 @@ fn main() {
                 3 => execute_day::<d03::Day, i32>(),
                 4 => execute_day::<d04::Day, i32>(),
                 5 => execute_day::<d05::Day, i64>(),
+                6 => execute_day::<d06::Day, i32>(),
 
                 _ => println!("Day number is out of bounds!"),
             };
