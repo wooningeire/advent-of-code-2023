@@ -50,12 +50,11 @@ impl Solver<i32> for Day {
         let race_time = parse_line();
         let race_record = parse_line();
 
-        let mut n_ways = 0;
         for seconds_held in 0..race_time {
             if (race_time - seconds_held) * seconds_held > race_record {
-                n_ways += 1;
+                return (race_time - seconds_held * 2) as i32 + 1;
             }
         }
-        n_ways
+        0
     }
 }
