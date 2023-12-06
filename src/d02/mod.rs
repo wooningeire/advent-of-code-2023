@@ -4,7 +4,7 @@ use crate::Solver;
 
 pub struct Day;
 
-impl Solver for Day {
+impl Solver<i32> for Day {
     fn run_01() -> i32 {
         let mut cumsum = 0;
         'line_loop: for (i, line) in fs::read_to_string("./src/d02/input.txt").unwrap().lines().map(String::from).enumerate() {
